@@ -59,7 +59,7 @@ $(document).ready(function () {
             $("#5pm").addClass("future")
     else $("#12pm").addClass("past")
 
-    if (currentHour == "1" && currentMinute <= "59" && amOrPm == "PM")
+    if (currentHour == "13" && currentMinute <= "59" && amOrPm == "PM")
         $("#1pm").addClass("present") &&
             $("#2pm").addClass("future") &&
             $("#3pm").addClass("future") &&
@@ -67,25 +67,25 @@ $(document).ready(function () {
             $("#5pm").addClass("future")
     else $("#1pm").addClass("past")
 
-    if (currentHour == "2" && currentMinute <= "59" && amOrPm == "PM")
+    if (currentHour == "14" && currentMinute <= "59" && amOrPm == "PM")
         $("#2pm").addClass("present") &&
             $("#3pm").addClass("future") &&
             $("#4pm").addClass("future") &&
             $("#5pm").addClass("future")
     else $("#2pm").addClass("past")
 
-    if (currentHour == "3" && currentMinute <= "59" && amOrPm == "PM")
+    if (currentHour == "15" && currentMinute <= "59" && amOrPm == "PM")
         $("#3pm").addClass("present") &&
             $("#4pm").addClass("future") &&
             $("#5pm").addClass("future")
     else $("#3pm").addClass("past")
 
-    if (currentHour == "4" && currentMinute <= "59" && amOrPm == "PM")
+    if (currentHour == "16" && currentMinute <= "59" && amOrPm == "PM")
         $("#4pm").addClass("present") &&
             $("#5pm").addClass("future")
     else $("#4pm").addClass("past")
 
-    if (currentHour == "5" && currentMinute <= "59" && amOrPm == "PM")
+    if (currentHour == "17" && currentMinute <= "59" && amOrPm == "PM")
         $("#5pm").addClass("present")
     else $("#5pm").addClass("past")
 
