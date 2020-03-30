@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-    // Created function to show the current date in the header:
     function showHeaderDate() {
         var HeaderDate = moment().format('dddd, MMMM Do');
         $("#currentDay").text(HeaderDate);
@@ -8,13 +7,19 @@ $(document).ready(function () {
 
     showHeaderDate();
 
+    document.getElementById("9am").textContent = (localStorage.getItem("9am"));
+    document.getElementById("10am").textContent = (localStorage.getItem("10am"));
+    document.getElementById("11am").textContent = (localStorage.getItem("11am"));
+    document.getElementById("12pm").textContent = (localStorage.getItem("12pm"));
+    document.getElementById("1pm").textContent = (localStorage.getItem("1pm"));
+    document.getElementById("2pm").textContent = (localStorage.getItem("2pm"));
+    document.getElementById("3pm").textContent = (localStorage.getItem("3pm"));
+    document.getElementById("4pm").textContent = (localStorage.getItem("4pm"));
+    document.getElementById("5pm").textContent = (localStorage.getItem("5pm"));
+
     var currentHour = moment().format("HH");
     var currentMinute = moment().format("mm");
     var amOrPm = moment().format("A");
-
-    console.log(currentHour);
-    console.log(amOrPm);
-    console.log(currentMinute);
 
     // Cycles through hour ids and sets colors appropriately:
     if (currentHour == "9" && currentMinute <= "59" && amOrPm == "AM")
@@ -89,4 +94,59 @@ $(document).ready(function () {
         $("#5pm").addClass("present")
     else $("#5pm").addClass("past")
 
+    $("#9button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("9am").value;
+        localStorage.setItem("9am", myReminder);
+    })
+
+    $("#10button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("10am").value;
+        localStorage.setItem("10am", myReminder);
+    })
+
+    $("#11button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("11am").value;
+        localStorage.setItem("11am", myReminder);
+    })
+
+    $("#12button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("12pm").value;
+        localStorage.setItem("12pm", myReminder);
+    })
+
+    $("#13button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("1pm").value;
+        localStorage.setItem("1pm", myReminder);
+    })
+
+    $("#14button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("2pm").value;
+        localStorage.setItem("2pm", myReminder);
+    })
+
+    $("#15button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("3pm").value;
+        localStorage.setItem("3pm", myReminder);
+    })
+
+    $("#16button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("4pm").value;
+        localStorage.setItem("4pm", myReminder);
+    })
+
+    $("#17button").on("click", function (event) {
+        event.preventDefault()
+        var myReminder = document.getElementById("5pm").value;
+        localStorage.setItem("5pm", myReminder);
+    })
+
 });
+
