@@ -22,7 +22,7 @@ $(document).ready(function () {
     var amOrPm = moment().format("A");
 
     // Cycles through hour ids and sets colors appropriately:
-    if (currentHour == "9" && currentMinute <= "59" && amOrPm == "AM")
+    if (currentHour == "09" && currentMinute <= "59" && amOrPm == "AM")
         $("#9am").addClass("present") &&
             $("#10am").addClass("future") &&
             $("#11am").addClass("future") &&
